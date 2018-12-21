@@ -1,8 +1,8 @@
-# Autonomous Driving Human Trajectory Prediction
+# Context-aware Human Trajectory Prediction for autonomous driving
 
-This is a pilot project, our purpose is to train models to predict context-aware pedestrain trajectories in support of the autonomous driving research and development. 
+This is a pilot project, our purpose is to train models to predict context-aware pedestrain trajectories in support of the autonomous driving research and development. The model is based on CNN and RNN. We also explored the possibilities of FCN.
 
-To support our project, our self-created datasets (default 6000 sets of map and trajectory, which can be made into >15k training samples) simulated pedestrains' walking trajectories in a urban junction condition, such as cross the zebra crossing, follow the side-walk and so on. 
+We used a self-created datasets (default 6000 sets of map and trajectory, which can be made into >15k training samples) which simulate pedestrains' walking trajectories in a urban junction condition, such as cross the zebra crossing, follow the side-walk and so on. 
 
 ### VRU prediction approaches specification
 
@@ -15,9 +15,7 @@ the challenge of this project is to combine context information with the traject
 
 * context: the original context map (default 1280 * 1280)
 
-* context_patch: a patch of the orginal context cropped for each data point on a trajectory as the center. for a training sample, the shape is usually (None, sequence_length, patch_size * patch_size)
-
-
+* context_patch: a patch of context cropped for the original image each data point on a trajectory as the center. 
 
 <pre>
 model	 x,y    delta x,y   context  context_patch   CNN      RNN   fc
