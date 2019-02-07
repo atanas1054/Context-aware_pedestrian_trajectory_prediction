@@ -31,8 +31,8 @@ vru_s:   	    -	      -			              all     -
 
 Here, I only included the code example of vru2 approach.
 
-#### context encoder
-Aside from using a simpe RNN to encode the context image, we also tried to use an autoencoder vae to encode the context patches and then combine with the delta x, y feature to train in RNN.The following is a visualization of a trained vae model for context images. The **left** blurried one is a vae reconstructed image, compared with its immediate **right** image which is the orginal one.
+#### autoencode the context image
+Aside from using CNN to encode the context image, we also tried to use an autoencoder vae to encode the context patches, then combine with the coordinate points feature to train on RNN.The following is a visualization of a trained vae model for context images. The **left** blurried one is a vae reconstructed image, its immediate **right** image which is the orginal one.
 
 <img src="https://raw.githubusercontent.com/celisun/autonomous_driving_human_trajectory_prediction/master/img/I_reconstructed0.png" width="500">
 
